@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 60px;
+  margin-right: 20rem;
+}
+nav {
+  display: flex;
+
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+}
+nav a:hover {
+  transition: 0.5s;
+  color: rgb(88, 255, 196);
+}
+button {
+  background-color: rgb(88, 255, 196);
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  margin-left: 3rem;
+}
+button:hover {
+  transition: 0.5s;
+  color: rgb(88, 255, 196);
+  background-color: white;
+  cursor: pointer;
+}
+.client h3{
+    text-align: center;
+    color: rgb(88, 255, 196);
+    font-size: 2rem;
+}
+.images img{
+    height: 50px;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.vid{
+    display: flex;
+    position: relative;
+    background-color: rgb(18, 37, 73);
+}
+.vid video {
+    margin-top: 4%;
+    margin-bottom: 60%;
+    margin-left: 10%;
+    display: block;
+}
+
+.sidetext {
+    color: aquamarine;
+    position: absolute;
+    font-size: 2rem;
+    margin-top: 6rem;
+    margin-left: 10rem;
+}
+.sidetext h6{
+    color: white;
+    margin-right: 50%;
+    font-size: 1.4rem;
+}
