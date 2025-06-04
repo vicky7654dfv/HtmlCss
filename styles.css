@@ -21,7 +21,7 @@ header {
   width: 100%;
 }
 .logo img {
-  height: 60px;
+  height: 70px;
   margin-right: 20rem;
 }
 nav {
@@ -63,21 +63,75 @@ button:hover {
   overflow: hidden;
   position: relative;
 }
-.banner video{
+.banner video {
   width: 100%;
   z-index: 1;
 }
-.banner-items{
- position: absolute;
- z-index: 2;
- top: 10%;
- left: 25%;
- color: white;
- justify-items:center;
- justify-content: center;
- font-size: 2.5rem;
+.banner-items {
+  color: white;
+  justify-items: center;
+  justify-content: center;
+  font-size: 5rem;
 }
- 
+.banner-logo {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 40%;
+  width: 20rem;
+}
+.firstH3 {
+  position: absolute;
+  z-index: 3;
+  top: 20%;
+  left: 30%;
+}
+.secondH3 {
+  position: absolute;
+  z-index: 4;
+  top: 20%;
+  left: 30%;
+}
+.TwosecondH3 {
+  margin-inline-start: -28.5rem;
+}
+.ThreesecondH3 {
+  margin-inline-start: -25rem;
+}
+.banner-logo,
+.firstH3,
+.secondH3 {
+  animation: fadeInOut 9s ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.banner-logo {
+  animation-delay: 0s;
+}
+.firstH3 {
+  animation-delay: 3s;
+}
+.secondH3 {
+  animation-delay: 6s;
+}
 
 .client h3 {
   text-align: center;
@@ -99,10 +153,6 @@ button:hover {
   gap: 4rem;
   animation: scroll-left 20s linear infinite;
 }
-.images-track:hover {
-  animation-play-state: paused;
-}
-
 @keyframes scroll-left {
   from {
     transform: translateX(0%);
@@ -112,11 +162,16 @@ button:hover {
   }
 }
 
+.images-track:hover {
+  animation-play-state: paused;
+}
+
 .video-wrapper {
   position: relative;
   width: 100%;
   max-width: 100%;
   margin: 4% auto;
+  overflow: hidden;
 }
 
 .video-wrapper video {
@@ -143,4 +198,22 @@ button:hover {
   color: rgb(255, 255, 255);
   font-size: 1.4rem;
   max-width: 50%;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  header {
+    margin: -1rem;
+    top: 1rem;
+  }
+  .TwosecondH3 {
+    margin-inline-start: -14rem;
+  }
+  .ThreesecondH3 {
+    margin-inline-start: -19rem;
+  }
+  .banner-items {
+    align-items: center;
+    font-size: 3rem;
+  }
 }
