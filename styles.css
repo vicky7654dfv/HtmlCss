@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   color: black;
   background-color: white;
 }
@@ -15,6 +15,10 @@ header {
   justify-content: space-evenly;
   padding: 1rem 2rem;
   font-weight: bold;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  width: 100%;
 }
 .logo img {
   height: 60px;
@@ -45,6 +49,7 @@ button {
   border-radius: 20px;
   border: none;
   font-size: 1rem;
+  font-weight: bold;
   padding: 0.8rem 1.2rem;
   margin-left: 3rem;
 }
@@ -54,40 +59,88 @@ button:hover {
   background-color: white;
   cursor: pointer;
 }
-.client h3{
-    text-align: center;
-    color: rgb(88, 255, 196);
-    font-size: 2rem;
+.banner {
+  overflow: hidden;
+  position: relative;
 }
-.images img{
-    height: 50px;
+.banner video{
+  width: 100%;
+  z-index: 1;
 }
-.images{
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
+.banner-items{
+ position: absolute;
+ z-index: 2;
+ top: 10%;
+ left: 25%;
+ color: white;
+ justify-items:center;
+ justify-content: center;
+ font-size: 2.5rem;
 }
-.vid{
-    display: flex;
-    position: relative;
-    background-color: rgb(18, 37, 73);
+ 
+
+.client h3 {
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(to bottom, rgb(88, 255, 196), rgb(0, 0, 0));
+  background-clip: text;
+  color: transparent;
 }
-.vid video {
-    margin-top: 4%;
-    margin-bottom: 60%;
-    margin-left: 10%;
-    display: block;
+.images img {
+  height: 50px;
+}
+.images {
+  overflow: hidden;
+  width: 100%;
+}
+.images-track {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  animation: scroll-left 20s linear infinite;
+}
+.images-track:hover {
+  animation-play-state: paused;
 }
 
-.sidetext {
-    color: aquamarine;
-    position: absolute;
-    font-size: 2rem;
-    margin-top: 6rem;
-    margin-left: 10rem;
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-.sidetext h6{
-    color: white;
-    margin-right: 50%;
-    font-size: 1.4rem;
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 4% auto;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.video-wrapper .sidetext {
+  color: aquamarine;
+  position: absolute;
+  font-size: 2rem;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+  width: 80%;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+.sidetext h6 {
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  max-width: 50%;
 }
