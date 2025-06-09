@@ -3,67 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arcon civil - Welcome to a new era in construction</title>
+    <title>Arcon Civil - Welcome to a new era in construction</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./assets/header/ACLogo.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Header start-->
     <header>
-      <a class="img" href="home.html">
-        <div class="logo">
+      <div class="header-container">
+        <a class="imag" href="home.html">
           <img src="./assets/header/ACLogo.png" alt="logo" />
-        </div>
-      </a>
-      <nav class="links">
-        <ul>
-          <li style="padding-top: 0.7rem"><a href="home.html">HOME</a></li>
-          <li style="padding-top: 0.7rem">
-            <a href="aboutus.html">ABOUT US</a>
-          </li>
-          <li style="padding-top: 0.7rem">
-            <a href="services.html">SERVICES</a>
-          </li>
-          <li style="padding-top: 0.7rem">
-            <a href="projects.html">PROJECTS</a>
-          </li>
-          <li style="padding-top: 0.7rem"><a href="news.html">NEWS</a></li>
-          <li>
-            <a href="contacts.html">
-              <button>GET IN TOUCH</button>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        </a>
+        <nav class="navigationBar1">
+          <ul class="list-items">
+            <li>
+              <a href="home.html">HOME</a>
+            </li>
+            <li>
+              <a href="aboutus.html">ABOUT US</a>
+            </li>
+            <li>
+              <a href="services.html">SERVICES</a>
+            </li>
+            <li>
+              <a href="projects.html">PROJECTS</a>
+            </li>
+            <li>
+              <a href="news.html">NEWS</a>
+            </li>
+            <li>
+              <a href="contacts.html">
+                <button class="contact-btn">GET IN TOUCH</button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <!--Header end-->
     <br /><br /><br /><br /><br />
     <main>
+      <!--Banner start-->
+
       <div class="banner">
-        <video
-          src="./assets/main/banner/banner.mp4"
-          autoplay
-          muted
-          loop
-        ></video>
+        <div class="video-wrap">
+          <video
+            src="./assets/main/banner/banner.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
         <div class="banner-items">
           <img class="banner-logo" src="./assets/header/ACLogo.png" alt="pic" />
-          <h3 class="firstH3">
+          <h3 class="firstText">
             WELCOME TO <br />
-            <span style="color: rgb(45, 45, 110)"> &nbsp; A NEW ERA </span
-            ><br />
-            <span style="margin-inline-start: -7rem">IN CONSTRUCTION</span>
+            <span class="middleText1">A NEW ERA</span><br />
+            IN CONSTRUCTION
           </h3>
-          <h3 class="secondH3">
+          <h3 class="secondText">
             BUILDING A <br />
-            <span class="TwosecondH3" style="color: rgb(111, 237, 195)"
-              >BETTER AND BRIGHTER FUTURE </span
-            ><br />
-            <span class="ThreesecondH3">FOR GENERATIONS TO COME</span>
+            <span class="middleText2">BETTER AND BRIGHTER FUTURE </span><br />
+            FOR GENERATIONS TO COME
           </h3>
         </div>
       </div>
+      <!--Banner end-->
       <br /><br /><br />
       <div class="client"><h3>CLIENTS</h3></div>
       <br /><br /><br />
+      <!--Images loop start-->
       <div class="images">
         <div class="images-track">
           <img
@@ -133,7 +155,9 @@
           />
         </div>
       </div>
+      <!--Images loop end-->
       <br /><br /><br />
+      <!--Video and 1*4 grid start-->
       <div class="video-section">
         <div class="video-wrapper">
           <video
@@ -225,17 +249,106 @@
           </div>
         </div>
       </div>
+      <!--Video and 1*4 grid end-->
+      <div class="servicesText">
+        <h3>OUR SERVICES</h3>
+      </div>
+      <!--Grid-3 start-->
+      <div class="container-3">
+        <div class="pr-mngt">
+          <div class="manage">
+            <img src="./assets/main/grid3/management.jpeg" alt="img1" />
+          </div>
+          <div class="content1">
+            <div class="content1-details">
+              <h2>PROJECT<br />MANAGEMENT</h2>
+              <br />
+              <hr />
+              <br />
+              <div class="hiddenContent">
+              <p>
+                Utilising our wealth of knowledge and experience to streamline
+                operations, we strive to ensure projects are executed safely and
+                efficiently. Requiring project management resources to aid your
+                current project deliverables? We provide the following
+                consultancy services:
+              </p>
+              <br />
+              <ul>
+                <li>Project Feasibilities and Tendering Services</li>
+                <li>Contract Management and Review</li>
+                <li>Procurement, Program & Resource Management</li>
+                <li>On-Site Delivery Assistance</li>
+                <li>Engineering Management</li>
+                <li>Quality Assurance and Management</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cnst-pr">
+          <div class="construction">
+            <img src="./assets/main/grid3/construction.jpg" alt="img2" />
+          </div>
+          <div class="content2">
+            <div class="content2-details">
+              <h2>CONSTRUCTION<br />PROJECTS</h2>
+              <br />
+              <hr />
+              <br />
+              <div class="hiddenContent">
+              <p>
+                Leveraging our extensive project management and consulting
+                experience on a diverse range of infrastructure projects, Arcon
+                Civil provide end-to-end oversight and accountability through
+                our ability to deliver projects. Combining expert advisory with
+                hands-on execution, our range of works include but are not
+                limited to:
+              </p>
+              <br />
+              <ul>
+                <li>Bulk Earthworks</li>
+                <li>Subgrade Remediation</li>
+                <li>Stormwater Drainage</li>
+                <li>Services Reticulation</li>
+                <li>Concrete Pavements - Trafficable and Non-Trafficable</li>
+                <li>Road Formation and Sealing</li>
+                <li>Road Furnishings</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Grid-3 end-->
+
+      <!--Grid-4 start-->
+      <div class="container-4">
+        <div class="details">
+          <img src="./assets/main/grid4/1.jpg" alt="img1">
+        </div>
+        <div class="details">
+          <img src="./assets/main/grid4/2.jpg" alt="img2">
+        </div>
+        <div class="details">
+          <img src="./assets/main/grid4/3.jpg" alt="img3">
+        </div>
+        <div class="details">
+          <img src="./assets/main/grid4/4.jpg" alt="img4">
+        </div>
+      </div>
+      <!--Grid-4 start-->
 
       <div class="middleText">
         <h3>KEEP UP TO DATE WITH</h3>
         <br />
         <img src="./assets/main/ACLogo-1-1.png" alt="logo" />
       </div>
-
+      <!--2*3 grid start-->
       <div class="container-2">
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/const.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/const.jpg" alt="pic" /> <br /><br />
             <h3>Construction Material Prices Reach New Heights</h3> </a
           ><br />
           <p>
@@ -246,7 +359,8 @@
         </div>
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/insight.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/insight.jpg" alt="pic" />
+            <br /><br />
             <h3>An Insight Into Civil Consultancy</h3> </a
           ><br />
           <p>
@@ -257,7 +371,8 @@
         </div>
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/innovation.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/innovation.jpg" alt="pic" />
+            <br /><br />
             <h3>Innovation in Construction</h3> </a
           ><br />
           <p>
@@ -268,7 +383,7 @@
         </div>
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/pledge.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/pledge.jpg" alt="pic" /> <br /><br />
             <h3>Our Pledge on Safety</h3> </a
           ><br />
           <p>
@@ -279,7 +394,7 @@
         </div>
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/civil.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/civil.jpg" alt="pic" /> <br /><br />
             <h3>Arcon Civil partners with Wyndham City Council</h3> </a
           ><br />
           <p>
@@ -290,7 +405,7 @@
         </div>
         <div class="content">
           <a href=""
-            ><img src="./assets/main/grid2/stage.jpg" alt="pic" /> <br /><br>
+            ><img src="./assets/main/grid2/stage.jpg" alt="pic" /> <br /><br />
             <h3>The Stage is Set for 2022</h3> </a
           ><br />
           <p>
@@ -300,8 +415,9 @@
           </p>
         </div>
       </div>
+      <!--2*3 grid end-->
       <div class="viewall">
-        <button>VIEW ALL</button>
+        <a href=""><button>VIEW ALL</button></a>
       </div>
     </main>
   </body>
