@@ -356,9 +356,9 @@ header {
 }
 
 /* Grid-3 end */
-
 /* Grid-4 start */
 .section-4 {
+  overflow: hidden;
   background-color: rgb(0, 38, 80);
   padding-top: 4rem;
   margin-top: 3rem;
@@ -379,16 +379,10 @@ header {
 .container-4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   padding: 5rem 10rem;
   margin-top: -2rem;
-}
-
-.bgLayer {
-  position: relative;
-  border-radius: 2rem;
-  overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 .details {
@@ -397,7 +391,7 @@ header {
   height: 100%;
   border-radius: 2rem;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
 }
 
 .details img {
@@ -408,40 +402,54 @@ header {
   display: block;
 }
 
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.bgLayer:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* light gray */
+}
+
 .details-words {
   position: absolute;
-  bottom: 5%;
-  left: 20%;
-  right: 0;
-  z-index: 2;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  font-size: 1rem;
   color: white;
-  padding: 1rem;
-  font-size: 0.8rem;
-  scale: 1.5;
-  border-radius: 0 0 2rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  border-radius: 2rem;
 }
 
 .details-words h3 {
-  font-size: 0.8rem;
-  transform: translateY(6.5rem);
-  transition: transform 0.4s ease;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transform: translateY(10rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
-.bgLayer:hover .details-words h3 {
-  transform: translateY(-4rem);
+.details-words:hover h3{
+  transform: translateY(1rem); 
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .hidLayer .ulList {
   transform: translateY(15rem);
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .bgLayer:hover .ulList {
   opacity: 1;
-  transform: translateY(-5rem);
+  transform: translateY(0);
 }
 
 .ulList li {
@@ -449,7 +457,6 @@ header {
   padding-bottom: 0.5rem;
   color: white;
 }
-
 /* Grid-4 end */
 
 .middleText {
@@ -533,72 +540,99 @@ header {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 .form-section-box {
   display: flex;
-  width: 100%;
+  width: 77%;
   background-color: rgb(15, 27, 61);
-  transform: scale(0.9);
+  border-radius: 3rem;
+  background: linear-gradient(to right, rgba(15, 27, 61, 1) 25%, rgba(110, 75, 0, 0.7)100%);
 }
 .form-section {
-  width: 50%;
+  width: 70%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
 ::placeholder {
   font-size: 1rem;
-  color: white;
+  color: rgb(197, 197, 197);
 }
 .section-title {
   background: linear-gradient(to bottom, rgb(88, 255, 196), rgb(0, 0, 0));
   background-clip: text;
   color: transparent;
 }
-
 .input-row {
-  display: block;
+  display: flex;
+  gap: 1px;
   justify-content: space-between;
-  gap: 1rem;
   padding-bottom: 2rem;
 }
 .input-group {
-  display: inline flex;
+  width: 100%;
+}
+.input-group .form-select{
+    margin-top: 2rem;
 }
 .form-input {
   background: transparent;
   border: none;
   border-bottom: 1px solid white;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem; 
+  padding: 1rem 0 1rem 0;
 }
 .form-select {
   background: transparent;
   border: none;
+  outline: none;
   border-bottom: 1px solid white;
-  color: rgb(255, 255, 255);
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: rgb(197, 197, 197);;
   font-size: 1rem;
+}
+.form-select option{
+  background-color: white;
+  color: black;
+}
+.form-input:hover, .form-select:hover{
+  border-bottom-style: dotted;
+}
+.form-input:focus, .form-select:focus{
+  outline: none;
+  box-shadow: none;
 }
 .input-group-full-width {
   padding-bottom: 2rem;
 }
 .input-group-full-width textarea {
-  min-height: 100px;
-  max-height: 150px;
-  min-width: 346px;
-  max-width: 346px;
+  min-height: 50px;
+  max-height: 100px;
+  min-width: 340px;
+  max-width: 340px;
+  margin-bottom: 1rem;
 }
 .attachment-section .attachment-button {
   background-color: rgb(192, 192, 192);
   padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+.attachment-button:hover{
+  background-color: rgb(144, 144, 144);
 }
 .contact-form button {
   padding: 1rem 3rem;
+  margin-top: 2rem;
   border-radius: 20rem;
   border: 0;
   font-size: 1rem;
   font-weight: bold;
   background-color: rgb(88, 255, 196);
+  cursor: pointer;
   transition: 0.5s;
 }
 .contact-form button:hover {
@@ -606,10 +640,26 @@ header {
   background-color: white;
 }
 .form-sideImg {
-  width: 50%;
+  position: relative;
+  width: 80%;
+  overflow: hidden;
 }
 .form-sideImg img {
   width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+}
+.form-sideImg::before {
+  content: "";
+  position: absolute;
+  width: 10%; /* adjust width of blur */
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  backdrop-filter: blur(3px); /* blur effect */
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 /*Form end*/
